@@ -7,6 +7,7 @@ const string CommandExit = "Exit";
 string inputExit = "";
 
 Console.WriteLine("Добро пожаловать в моё приложение.");
+
 while (CommandExit != inputExit)
 {
     Console.WriteLine($"Что вы хотите сделать?\n\n{CommandCoin} - игра в монетку\n{CommandChangePassword} - установить пароль" +
@@ -66,6 +67,7 @@ while (CommandExit != inputExit)
                 Console.ForegroundColor = ConsoleColor.Red;
             }
             break;
+
         case CommandCalculator:
             const string SymbolSum = "+";
             const string SymbolSubtraction = "-";
@@ -93,18 +95,22 @@ while (CommandExit != inputExit)
                     conclusion = number1 + number2;
                     Console.WriteLine($"Ваш ответ: {conclusion}");
                     break;
+
                 case SymbolSubtraction:
                     conclusion = number1 - number2;
                     Console.WriteLine($"Ваш ответ: {conclusion}");
                     break;
+
                 case SymbolDivide:
                     conclusion = number1 / number2;
                     Console.WriteLine($"Ваш ответ: {conclusion}");
                     break;
+
                 case SymbolMultiply:
                     conclusion = number1 * number2;
                     Console.WriteLine($"Ваш ответ: {conclusion}");
                     break;
+
                 case SymbolModuleDivide:
                     conclusion = number1 * number2;
                     Console.WriteLine($"Ваш ответ: {conclusion}");
@@ -112,14 +118,17 @@ while (CommandExit != inputExit)
             }
             Console.ReadLine();
             break;
+
         case CommandExit:
             inputExit = CommandExit;
             break;
+
         default:
             Console.WriteLine("Вы выбрали неизвестную команду!");
             Console.ReadLine();
             break;
 
     }
+
     Console.Clear();
 }
